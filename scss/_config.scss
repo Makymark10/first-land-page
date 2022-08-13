@@ -1,0 +1,19 @@
+$primary-color: rgb(19, 17, 17);
+$secondary-color: rgb(90, 85, 85);
+$white-color: #fff;
+$acative-links: rgb(194, 100, 38);
+$gray-bg: rgb(34, 32, 32);
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}
